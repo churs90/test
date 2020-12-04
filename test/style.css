@@ -1,0 +1,147 @@
+body {
+    background-image: url("./image/apple-nastolnye.jpg");
+    height: 100vh;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+
+.form-wrapper {
+    font-size: 20px;
+    width: 90%;
+    margin: 50px auto;
+    transform: skew(-50deg);
+}
+
+.form-wrapper form {
+    display: flex;
+}
+
+.form-wrapper * {
+   padding: 0;
+    margin: 0;
+}
+
+.form-wrapper .input-wrapper {
+    width: 75%;
+    background-color: rgba(255,255,255,0.6);
+    border: 3px solid white;
+    border-right-width: 4px;
+    border-left-width: 4px;
+    overflow: hidden;
+}
+
+.form-wrapper .input-wrapper input {
+    transform: skew(50deg);
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding-left: 30px;
+    height: 60px;
+}
+
+.form-wrapper .input-wrapper input:focus {
+    border: none;
+}
+
+.form-wrapper button {
+    font-weight: bold;
+    border: 3px solid white;
+    border-right-width: 4px;
+    border-left-width: 4px;
+    width: 25%;
+    background-color: red;
+    color: white;
+    display: block;
+    overflow: hidden;
+}
+
+.form-wrapper button p {
+    transform: skew(50deg);
+}
+
+.form-wrapper .error {
+    border: 3px solid red;
+}
+
+.modalWindow {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    border: 3px solid white;
+    text-align: center;
+    padding: 60px 0;
+    color: white;
+    font-size: 24px;
+    visibility: hidden;
+    transform: scale(0);
+    transition: 0.4s linear;
+}
+
+.modalWindow .close {
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-size: 32px;
+    transition: 0.3s;
+}
+.modalWindow .close:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.modalActive {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.modalWindow p {
+    color: aqua;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .form-wrapper {
+        transform: skew(0);
+    }
+    .form-wrapper .input-wrapper {
+        width: 55%;
+        border-width:3px;
+    }
+    .form-wrapper .input-wrapper input {
+        transform: skew(0);
+        padding-left: 30px;
+    }
+    .form-wrapper button {
+        width: 45%;
+        border-width:3px;
+    }
+
+    .form-wrapper button p {
+        transform: skew(0);
+    }
+    .modalWindow {
+        width: 240px;
+        margin-left: -120px;
+    }
+}
+
+
+
